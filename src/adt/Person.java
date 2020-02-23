@@ -1,5 +1,7 @@
 package adt;
 
+import implementation.Contacts;
+
 public class Person {
     // a field to store the first name
     // a field to store the last name
@@ -8,11 +10,11 @@ public class Person {
 
     String firstName;
     String lastName;
-    MyListADT<String> multipleContacts;
+    public Contacts multipleContacts;
     String emailAddress;
 
 
-    public Person(String firstName, String lastName, MyListADT<String> multipleContacts, String emailAddress) {
+    public Person(String firstName, String lastName, Contacts multipleContacts, String emailAddress) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.multipleContacts = multipleContacts;
@@ -35,11 +37,11 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public MyListADT<String> getMultipleContacts() {
+    public Contacts getMultipleContacts() {
         return multipleContacts;
     }
 
-    public void setMultipleContacts(MyListADT<String> multipleContacts) {
+    public void setMultipleContacts(Contacts multipleContacts) {
         this.multipleContacts = multipleContacts;
     }
 
