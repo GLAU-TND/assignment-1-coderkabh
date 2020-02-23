@@ -5,7 +5,7 @@ import adt.MyListADT;
 public class MyList<E> implements MyListADT<E> {
 
     private Node<E> head = null;
-    private int size = 0;
+    public int size = 0;
 
     private Node<E> getNode(int index) {
         Node<E> response = head;
@@ -20,6 +20,10 @@ public class MyList<E> implements MyListADT<E> {
 
         head = new Node<>(item, head);
         size++;
+    }
+
+    public void addOnly1Contact(E item) {
+        head = new Node<>(item, head);
     }
 
     private void addAfter(Node<E> node, E item) {
@@ -106,29 +110,40 @@ public class MyList<E> implements MyListADT<E> {
 
     }
 
+    public void printContactList() {
+        if (size == 1) {
+            E data = this.getNode(0).getData();
+            System.out.println(data);
+        }
+        for (int i = 0; i < size; i++) {
 
-    private static class Node<E> {
-        // these are the fields for the singly-linked list
+
+            E data = this.getNode(i).getData();
+            System.out.print(data + (i < size - 1 ? ", " : ""));
+
+        }
+    }
+
+
+    static class Node<E> {
+
         private E data;
         private Node<E> next;
 
-        // constructor to initialize the data field of the node
+
         private Node(E data) {
             this.data = data;
         }
 
-        // constructor to initialize both the fields of the node
         private Node(E data, Node<E> next) {
             this.data = data;
             this.next = next;
         }
 
-        // getter method for the node's data field
         private E getData() {
             return data;
         }
 
-        // getter method for the node's next field
         private Node<E> getNext() {
             return next;
         }
