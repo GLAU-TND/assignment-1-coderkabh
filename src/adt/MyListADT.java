@@ -1,4 +1,4 @@
-package list;
+package adt;
 
 public interface MyListADT<E> {
     void add(E item);
