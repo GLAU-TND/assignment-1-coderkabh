@@ -1,18 +1,18 @@
 package implementation;
 
-import adt.MyListADT;
+import adt.DetailsADT;
 import adt.Person;
 import list.MyList;
 
 import java.util.Scanner;
 
-public class Details<E> implements MyListADT<E> {
+public class Details<E> implements DetailsADT<E> {
     MyList<Person> contact = new MyList<>();
     Scanner scan = new Scanner(System.in);
     Contacts contacts = new Contacts();
 
     @Override
-    public void add(E item) {
+    public void addPerson() {
 
         System.out.println("You have chosen to add a new contact: ");
         System.out.println("First Name: ");
@@ -32,17 +32,17 @@ public class Details<E> implements MyListADT<E> {
     }
 
     @Override
-    public E remove() {
+    public E removePerson() {
         return null;
     }
 
     @Override
-    public int search(E item) {
+    public int searchPerson(E item) {
         return 0;
     }
 
     @Override
-    public void sort() {
+    public void sortPerson() {
 
     }
 }
