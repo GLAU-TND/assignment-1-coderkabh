@@ -7,8 +7,6 @@ import java.util.Scanner;
 
 public class Contacts implements ContactADT {
     MyList<String> contacts = new MyList<>();
-    Scanner scan = new Scanner(System.in);
-    String contact;
 
     public String getContact() {
         return contact;
@@ -17,6 +15,11 @@ public class Contacts implements ContactADT {
     public void setContact(String contact) {
         this.contact = contact;
     }
+
+
+    Scanner scan = new Scanner(System.in);
+    String contact;
+
 
     @Override
     public void addContact() {
